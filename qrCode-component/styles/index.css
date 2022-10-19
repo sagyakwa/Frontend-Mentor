@@ -47,9 +47,10 @@ p {
     width: 18.75rem;
 }
 
-.qr-container h2 {
+.qr-container h1 {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
+    font-size: 1.5rem;
     margin: 1rem auto;
     text-align: center;
     width: 18.75rem;
