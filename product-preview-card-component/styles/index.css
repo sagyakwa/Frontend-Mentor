@@ -1,0 +1,185 @@
+/*********** GLOBAL TAGS ************/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+html, body {
+    background-color: hsl(30, 38%, 92%);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+}
+
+/*********** Card Component ************/
+
+.card-component-container {
+    min-width: 0;
+    max-width: 580px;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    border-radius: 0.9375rem;
+}
+
+.card-component-container, .text-container, .image-container {
+    max-height: 420px;
+}
+
+/*********** Image Container ************/
+
+.image-container {
+    max-width: 50%;
+}
+
+.image-container, .text-container {
+    object-fit: contain;
+}
+
+.image-container #main-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.9375rem 0 0 0.9375rem;
+}
+
+/*********** Text Container ************/
+
+.text-container {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1.2rem 1.5rem .5rem 2rem;
+    margin: 0;
+    overflow: scroll;
+}
+
+.text-container p {
+    line-height: 1.2rem;
+    color: hsl(228, 12%, 48%);
+}
+
+.text-container > * {
+    text-align: left;
+    margin: 0.3125rem;
+}
+
+.text-container .prices {
+    display: inline-flex;
+    padding: 0;
+    align-items: center;
+    max-height: 3.75rem;
+}
+
+.text-container .prices p {
+    margin-left: 1.3rem;
+}
+
+.text-container .prices .large-price {
+    color: hsl(158, 36%, 37%);
+    font-weight: 500;
+}
+
+.text-container .perfume-caption {
+    letter-spacing: .3rem;
+}
+
+.text-container button {
+    background: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    display: inline-flex;
+    justify-content: center;
+    padding: 0 0 0.0625rem 0;
+    border-width: 0;
+    outline: none;
+    border-radius: 0.4375rem;
+    max-height: 60px;
+    min-height: 50px;
+    min-width: 25px;
+}
+
+.text-container button > * {
+    margin: auto;
+}
+
+.text-container button #cart-icon {
+    padding: 0 0.5rem 0 3.3rem;
+}
+
+.text-container button #add-to-cart {
+    color: inherit;
+    padding: 0 3.3rem 0 0.5rem;
+}
+
+/*********** RESPONSIVE ************/
+
+@media only screen and (max-width: 500px) {
+    .card-component-container {
+        max-height: 900px;
+        flex-flow: column;
+
+    }
+
+    .card-component-container #main-img {
+        border-radius: 0.9375rem 0.9375rem 0 0;
+    }
+
+    .card-component-container, .text-container, .image-container {
+        max-width: 350px;
+    }
+
+    .text-container {
+        padding: 1rem 0.9rem;
+    }
+
+    .text-container .perfume-description {
+        line-height: 1.5rem;
+    }
+
+    .text-container button #cart-icon {
+        padding: 0 0.5rem 0 5.3rem;
+    }
+
+    .text-container button #add-to-cart {
+        padding: 0 5.3rem 0 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .text-container button #add-to-cart {
+        padding: 0 1rem;
+    }
+
+    .text-container button #cart-icon {
+        display: none;
+    }
+}
+
