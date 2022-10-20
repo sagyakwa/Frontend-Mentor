@@ -26,16 +26,15 @@ main {
 }
 
 h1 {
-    font-weight: 700;
-}
-
-h1 {
     font-family: 'Fraunces', serif;
+    font-weight: 700;
 }
 
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.875rem;
+    line-height: 1.2rem;
+    color: hsl(228, 12%, 48%);
 }
 
 /*********** Card Component ************/
@@ -82,11 +81,6 @@ p {
     overflow: scroll;
 }
 
-.text-container p {
-    line-height: 1.2rem;
-    color: hsl(228, 12%, 48%);
-}
-
 .text-container > * {
     text-align: left;
     margin: 0.3125rem;
@@ -124,7 +118,7 @@ p {
     max-height: 60px;
     min-height: 50px;
     min-width: 25px;
-    transition: background-color .3s;
+    transition: background-color .4s;
 }
 
 .text-container button:hover {
