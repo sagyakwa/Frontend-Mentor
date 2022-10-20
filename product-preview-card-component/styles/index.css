@@ -29,7 +29,7 @@ h1 {
     font-weight: 700;
 }
 
-h1{
+h1 {
     font-family: 'Fraunces', serif;
 }
 
@@ -124,6 +124,13 @@ p {
     max-height: 60px;
     min-height: 50px;
     min-width: 25px;
+    transition: background-color .3s;
+}
+
+.text-container button:hover {
+    cursor: pointer;
+    background: hsl(158, 42%, 28%);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 }
 
 .text-container button > * {
