@@ -9,8 +9,32 @@
     --Very-Light-Gray: hsl(0, 0%, 95%);  /*background, headings, buttons*/
 }
 
+/****************** GLOBAL DEFINITIONS ******************/
+
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    margin: inherit;
+    padding: inherit;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 p {
