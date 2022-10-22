@@ -153,8 +153,8 @@ h1 {
 /****************** RESPONSIVE ******************/
 
 @media only screen and (max-width: 771px) {
-    html {
-        overflow: scroll;
+    html, .card-component-container, .vehicle-info-container {
+        overflow: auto;
     }
 
     /****************** CARD CONTAINER COMPONENT RULES ******************/
@@ -162,7 +162,6 @@ h1 {
         flex-flow: column nowrap;
         max-width: 400px;
         max-height: 2200px;
-        overflow: scroll;
     }
 
     .card-component-container p {
@@ -178,7 +177,6 @@ h1 {
     /****************** VEHICLE INFO CONTAINER COMPONENT RULES ******************/
     .vehicle-info-container {
         padding: 2rem;
-        overflow: scroll;
     }
 
     /****************** SEDAN INFO CONTAINER COMPONENT RULES ******************/
