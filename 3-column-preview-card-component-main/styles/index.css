@@ -52,7 +52,7 @@ h1 {
     color: var(--Very-Light-Gray);
 }
 
-p {
+p, button {
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     font-size: .9375rem;
@@ -87,8 +87,8 @@ p {
 .vehicle-info-container button {
     border: none;
     background-color: var(--Very-Light-Gray);
-    border-radius: 25px; /*TODO: change to rem*/
-    height: 50px;
+    border-radius: 1.5625rem;
+    min-height: 50px;
     max-height: 90px;
     width: 73%;
     margin-top: 2rem;
@@ -103,7 +103,7 @@ p {
 
 .vehicle-info-container button:active {
     box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem rgba(0, 0, 0, 0.75);
-    transform: translateY(4px);
+    transform: translateY(0.25rem);
 }
 
 /****************** SEDAN INFO CONTAINER COMPONENT RULES ******************/
