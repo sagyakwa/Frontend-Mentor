@@ -1,0 +1,18 @@
+/****************** COLORS DEFINITIONS ******************/
+:root {
+    /****************** PRIMARY COLORS ******************/
+    --Bright-Orange: hsl(31, 77%, 52%);
+    --Dark-Cyan: hsl(184, 100%, 22%);
+    --Very-Dark-Cyan: hsl(179, 100%, 13%);
+    /****************** NEUTRAL COLORS ******************/
+    --Transparent-White: hsla(0, 0%, 100%, 0.75);  /*paragraphs*/
+    --Very-Light-Gray: hsl(0, 0%, 95%);  /*background, headings, buttons*/
+}
+
+html {
+    font-size: 100%;
+}
+
+p {
+    font-size: .09375rem;
+}
