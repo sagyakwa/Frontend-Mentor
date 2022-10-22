@@ -52,19 +52,12 @@ h1 {
     color: var(--Very-Light-Gray);
 }
 
-p, button {
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: 400;
-    font-size: .9375rem;
-    color: var(--Transparent-White);
-}
-
 /****************** CARD CONTAINER COMPONENT RULES ******************/
 
 .card-component-container {
     display: flex;
-    max-width: 792px;
-    max-height: 480px;
+    max-width: 860px;
+    max-height: 500px;
     border-radius: 0.5rem;
 }
 
@@ -81,6 +74,19 @@ p, button {
 
 .vehicle-info-container > img {
     margin: 0;
+}
+
+.vehicle-info-container > p {
+    padding-bottom: 1.5rem;
+    padding-right: 1.3rem;
+}
+
+.vehicle-info-container p, button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: .9375rem;
+    color: var(--Transparent-White);
+    line-height: 1.6rem;
 }
 
 /*All buttons*/
