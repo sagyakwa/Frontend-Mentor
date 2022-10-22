@@ -1,15 +1,17 @@
-/****************** COLORS DEFINITIONS ******************/
+/****************** ROOT PROPERTIES ******************/
 :root {
-    /****************** PRIMARY COLORS ******************/
+    /****************** PRIMARY COLOR DEFINITIONS ******************/
     --Bright-Orange: hsl(31, 77%, 52%);
     --Dark-Cyan: hsl(184, 100%, 22%);
     --Very-Dark-Cyan: hsl(179, 100%, 13%);
-    /****************** NEUTRAL COLORS ******************/
-    --Transparent-White: hsla(0, 0%, 100%, 0.75);  /*paragraphs*/
-    --Very-Light-Gray: hsl(0, 0%, 95%);  /*background, headings, buttons*/
+    /****************** NEUTRAL COLOR DEFINITIONS ******************/
+    --Transparent-White: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --Very-Light-Gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+    /****************** CSS RULES ******************/
+    background-color: var(--Very-Light-Gray);
 }
 
-/****************** GLOBAL DEFINITIONS ******************/
+/****************** GLOBAL RULES ******************/
 
 * {
     box-sizing: border-box;
@@ -22,6 +24,8 @@ html {
 }
 
 body {
+    display: flex;
+    align-items: center;
     height: 100vh;
     width: 100%;
     margin: inherit;
@@ -29,14 +33,155 @@ body {
 }
 
 main {
-    height: 100%;
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: var(--Very-Light-Gray);
 }
 
 p {
-    font-size: .09375rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: .9375rem;
+    color: var(--Transparent-White);
+}
+
+/****************** CARD CONTAINER COMPONENT RULES ******************/
+
+.card-component-container {
+    display: flex;
+    max-width: 810px;
+    max-height: 460px;
+    border-radius: 0.5rem;
+}
+
+/****************** ALL VEHICLE INFO CONTAINER COMPONENT RULES ******************/
+
+.vehicle-info-container {
+    min-height: 100%;
+    padding: 3rem;
+}
+
+.vehicle-info-container > * {
+    margin: 2rem 0;
+}
+
+.vehicle-info-container > img {
+    margin: 0;
+}
+
+/*All buttons*/
+.vehicle-info-container button {
+    border: none;
+    background-color: var(--Very-Light-Gray);
+    border-radius: 25px; /*TODO: change to rem*/
+    height: 50px;
+    max-height: 90px;
+    width: 73%;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: scale .4s, transform .1ms;
+}
+
+.vehicle-info-container button:hover {
+    scale: 1.1;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+}
+
+.vehicle-info-container button:active {
+    box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem rgba(0, 0, 0, 0.75);
+    transform: translateY(4px);
+}
+
+/****************** SEDAN INFO CONTAINER COMPONENT RULES ******************/
+
+#sedan {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#sedan, button {
+    background-color: var(--Bright-Orange);
+}
+
+#sedan button {
+    color: var(--Bright-Orange);
+}
+
+/****************** SUV INFO CONTAINER COMPONENT RULES ******************/
+
+#suv, button {
+    background-color: var(--Dark-Cyan);
+}
+
+#suv button {
+    color: var(--Dark-Cyan);
+}
+
+/****************** LUXURY INFO CONTAINER COMPONENT RULES ******************/
+
+#luxury {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#luxury, button {
+    background-color: var(--Very-Dark-Cyan);
+}
+
+#luxury, button {
+    color: var(--Very-Dark-Cyan);
+}
+
+/****************** RESPONSIVE ******************/
+
+@media only screen and (max-width: 771px) {
+    html {
+        overflow: scroll;
+    }
+
+    /****************** CARD CONTAINER COMPONENT RULES ******************/
+    .card-component-container {
+        flex-flow: column nowrap;
+        max-width: 400px;
+        max-height: 2200px;
+        overflow: scroll;
+    }
+
+    .card-component-container p {
+        line-height: 2rem;
+        margin: 2rem 0;
+        padding: 0 4rem 0 0;
+    }
+
+    .card-component-container button {
+        margin-top: 2rem;
+    }
+
+    /****************** VEHICLE INFO CONTAINER COMPONENT RULES ******************/
+    .vehicle-info-container {
+        padding: 2rem;
+        overflow: scroll;
+    }
+
+    /****************** SEDAN INFO CONTAINER COMPONENT RULES ******************/
+    #sedan {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    /****************** LUXURY INFO CONTAINER COMPONENT RULES ******************/
+    #luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
 }
