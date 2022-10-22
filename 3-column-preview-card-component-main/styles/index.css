@@ -63,8 +63,8 @@ p, button {
 
 .card-component-container {
     display: flex;
-    max-width: 810px;
-    max-height: 460px;
+    max-width: 792px;
+    max-height: 480px;
     border-radius: 0.5rem;
 }
 
@@ -72,7 +72,7 @@ p, button {
 
 .vehicle-info-container {
     min-height: 100%;
-    padding: 3rem;
+    padding: 1.8rem;
 }
 
 .vehicle-info-container > * {
