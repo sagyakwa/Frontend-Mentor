@@ -57,7 +57,7 @@ h1 {
 .card-component-container {
     display: flex;
     max-width: 860px;
-    max-height: 500px;
+    max-height: 490px;
     border-radius: 0.5rem;
 }
 
