@@ -91,6 +91,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #rock-paper-scissors-results-images-container > img {

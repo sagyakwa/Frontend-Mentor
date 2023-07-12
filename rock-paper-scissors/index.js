@@ -25,6 +25,7 @@ const headerText = document.getElementById("header-text-text");
 const resultsText = document.getElementById("results-text");
 const handImages = document.getElementsByClassName("hands");
 const resultsImages = document.getElementsByClassName("result-image-item");
+const resultsImagesContainer = document.getElementById("rock-paper-scissors-results-images-container");
 let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
 let currentRound = 1;
@@ -94,9 +95,12 @@ function playGame(amountOfTimesToPlay = 5) {
     modifyHtmlElementsView(resultsImages, true);
     const computer = new Player("Computer");
     const player = new Player("Player");
+    resultsImagesContainer.onclick = () => {
+        modifyHtmlElementsView(resultsImages, true);
+        modifyHtmlElementsView(handImages, false);
+    }
     for (let handButton of handButtons) {
-        handButton.onclick = function () {
-            playerChoiceImage.src = "";
+        handButton.onclick = () => {
             playerChoiceImage.src = handButtonIdToImage.get(handButton.id);
             player.throwHand(handButtonIdToHandChoice.get(handButton.id));
             computer.throwHand();
@@ -117,10 +121,6 @@ function playGame(amountOfTimesToPlay = 5) {
                 currentRound++;
                 modifyHtmlElementsView(handImages, true);
                 modifyHtmlElementsView(resultsImages, false);
-                setTimeout(function () {
-                    modifyHtmlElementsView(handImages, false);
-                    modifyHtmlElementsView(resultsImages, true);
-                }, 1200);
             } catch (err) {
                 headerText.innerText = `Error occurred: ${err}. Please reload`;
             }
