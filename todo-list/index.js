@@ -2,8 +2,12 @@ const textBox = document.querySelector("#text-box");
 const addButton = document.querySelector("#add-button");
 const mainContainer = document.querySelector("#main-container");
 
+window.addEventListener("click", () => {
+    textBox.focus();
+});
+
 const addItem = (event) => {
-    if (textBox.value !== "" && (event.target === addButton || (event.target === textBox && event.key === "Enter"))) {
+    if (textBox.value !== "" && (event.target === addButton)) {
         /**** ELEMENT CREATION *****/
             // Create and style the to-do item container
         const todoItemContainer = document.createElement("div");
@@ -48,7 +52,15 @@ const addItem = (event) => {
     }
 }
 
-textBox.addEventListener("keyup", addItem)
+textBox.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        addButton.classList.toggle("active");
+        addButton.click();
+        setTimeout(() => {
+            addButton.classList.toggle("active");
+        }, 100);
+    }
+});
 addButton.addEventListener("click", addItem);
 
 const onCheckBoxClicked = (mouseEvent) => {
@@ -58,5 +70,8 @@ const onCheckBoxClicked = (mouseEvent) => {
 
 const onCloseButtonClicked = (mouseEvent) => {
     const todoItemContainer = mouseEvent.target.parentNode;
-    todoItemContainer.remove();
+    todoItemContainer.classList.add("zoom-delete");
+    setTimeout(() => {
+        todoItemContainer.remove();
+    }, 300);
 };
