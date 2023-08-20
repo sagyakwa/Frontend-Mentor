@@ -1,7 +1,8 @@
 html, body {
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     margin: auto;
+    max-width: 100%;
 }
 
 body {
@@ -23,7 +24,7 @@ h1 {
     align-items: center;
     justify-content: start;
     height: 80%;
-    width: 80%;
+    width: 90%;
 }
 
 #input-container {
@@ -33,6 +34,8 @@ h1 {
     border-radius: 1.5625rem;
     border: 0.13rem darkgrey solid;
     margin-bottom: 2rem;
+    max-width: 100%;
+    overflow: clip;
 }
 
 #text-box {
@@ -52,7 +55,7 @@ h1 {
     border-style: none;
     outline: none;
     border-radius: 1.5625rem;
-    width: 15%;
+    width: 20%;
     cursor: pointer;
     background-color: #fd633a;
     color: white;
@@ -80,6 +83,7 @@ h1 {
     justify-content: space-between;
     align-content: start;
     width: 35rem;
+    max-width: 90%;
     height: auto;
     padding: 0 1.8rem;
 }
