@@ -205,3 +205,10 @@ h1 {
 .zoom-delete {
     animation: zoom forwards 1s ease-out 1;
 }
+
+/* Rules for touch screen devices */
+@media (pointer: coarse) {
+    #add-button {
+        display: none;
+    }
+}
