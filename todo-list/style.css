@@ -139,8 +139,8 @@ h1 {
 
 /* Style the checkmark/indicator */
 .checkbox-container .checkmark:after {
-    left: 0.563rem;
-    top: 0.313rem;
+    left: 0.463rem;
+    top: 0.213rem;
     width: 0.313rem;
     height: 0.625rem;
     border: solid white;
