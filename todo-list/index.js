@@ -3,7 +3,10 @@ const addButton = document.querySelector("#add-button");
 const mainContainer = document.querySelector("#main-container");
 
 window.addEventListener("click", () => {
-    textBox.focus();
+    const mediaQuery = window.matchMedia("(pointer: coarse) or (hover: none)");
+    if (!mediaQuery.matches) {
+        textBox.focus();
+    }
 });
 
 const addItem = (event) => {
