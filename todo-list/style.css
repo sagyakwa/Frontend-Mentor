@@ -150,6 +150,13 @@ h1 {
     transform: rotate(45deg);
 }
 
+/* Disable highlighting */
+.checkbox, .checkmark, #add-button, .close-button {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
 .close-button {
     border-style: none;
     outline: none;
@@ -178,8 +185,12 @@ h1 {
 
 /***Strike animation***/
 @keyframes strike {
-    from { text-decoration-color: transparent; }
-    to { text-decoration-color: #000000; }
+    from {
+        text-decoration-color: transparent;
+    }
+    to {
+        text-decoration-color: #000000;
+    }
 }
 
 /***Zoom out delete animation***/
@@ -204,4 +215,11 @@ h1 {
 
 .zoom-delete {
     animation: zoom forwards 1s ease-out 1;
+}
+
+/* Rules for touch screen devices */
+@media (pointer: coarse) {
+    #add-button {
+        display: none;
+    }
 }
